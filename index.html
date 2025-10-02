@@ -5,22 +5,147 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Urbantana — Core Projects</title>
   <meta name="description" content="Urbantana ecosystem: navigate to Civibot, Product Store, Switchers Hub." />
-  <!-- روابط الخطوط والأنماط كما هي -->
+
+  <!-- خطوط Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- أيقونات FontAwesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-dP3B+Nhkc8D4z/QX0qSyThJIDEtXbFjOkZudVk9ivxyT0Vsv7VvAIOUhXKAdvOETCxGi+qE5Y/eg2z4D+Uzx0A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
   <style>
-    /* أضفنا دعم RTL بتبديل المحاذاة */
-    body { text-align: right; direction: rtl; }
-    .card { text-align: center; }
-    /* بقية الأنماط دون تغيير */
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent2: #34d399;
+      --border: #1f2937;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      direction: rtl;
+      text-align: right;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      margin: 0 auto 12px;
+      box-shadow: 0 6px 20px rgba(56, 189, 248, 0.25);
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0.2rem 0;
+    }
+    .tagline {
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 16px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    .card i {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .card h2 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      line-height: 1.3;
+    }
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 0.4rem;
+    }
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+    /* قسم About */
+    #about {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 2rem;
+    }
+    #about h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: var(--accent2);
+    }
+    #about p {
+      margin: 0.5rem 0;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <div class="logo" aria-hidden="true"></div>
-      <h1>Urbantana Core Projects<br>مشاريع أوربانتانا الرئيسية</h1>
+      <h1>
+        Urbantana Core Projects<br>
+        مشاريع أوربانتانا الرئيسية
+      </h1>
       <p class="tagline">
-        Navigate to Urbantana’s ecosystem initiatives  
-        <br>تصفّح مبادرات منظومة أوربانتانا
+        Navigate to Urbantana’s ecosystem initiatives<br>
+        تصفّح مبادرات منظومة أوربانتانا
       </p>
     </header>
 
@@ -28,28 +153,37 @@
     <section id="about">
       <h2>عن مشروع المدينة الحضرية الرمزية</h2>
       <p>
-        مبادرة فنية–ثقافية تفاعلية تعتمد منصة ذكاء اصطناعي طبقية لتنظيم سرديات درامية حول قضايا حضرية،
-        تحويلها إلى محاكاة ثلاثية الأبعاد، ثم طباعتها نموذجياً في مختبر MAPA.  
-        يشارك الطلاب والمبدعون في إنتاج وتنقيح الأفكار، ويختتم كل فصل فعالية “يوم المدينة الحية” لعرض النتائج والتصويت.
+        مبادرة فنية–ثقافية تفاعلية تستند إلى منصة ذكاء اصطناعي طبقية لضمان أعلى درجات الانخراط والاستكشاف.
+        يكتب كل مشارك مشهداً درامياً حول تحدٍّ حضري حقيقي، فيغني النموذج السرد ويحوّله إلى محاكاة ثلاثية الأبعاد،
+        ثم يرسل ملفات G-Code إلى مختبر MABA للطباعة الرقمية. ينتج هذا منحوتات حضرية مصغّرة قابلة للاختبار وتعديل الميداني.
+      </p>
+      <p>
+        تدمج المنصة تأويل المعنى عبر أدوات دراما التعليم و“قبعات الخبير”، وتدعم البحث المنهجي ولعب الأدوار
+        وتوليد الأسئلة وإبداع الحلول. تختتم الدورة بـ“يوم المدينة الحية” لعرض النماذج وحلقات حوارية
+        وتصويت على الأفكار الأكثر قابلية للتطبيق، ويُقاس الأثر عبر مؤشرات الانخراط والاستقصاء والإبداع والتغيير الاجتماعي.
       </p>
     </section>
 
-    <!-- شبكة الكروت -->
+    <!-- شبكة المشروعات -->
     <section class="grid">
-      <!-- مثال على إضافة كارت مشروع Blueprint -->
       <div class="card">
         <a href="https://urbantana.github.io/blue_print/" target="_blank" rel="noopener">
           <i class="fas fa-map"></i>
-          <h2>Blue Print<br>مخطط مديني رمزي</h2>
+          <h2>
+            Blue Print<br>
+            مخطط مديني رمزي
+          </h2>
           <p>تفاصيل المشروع الفني–الثقافي</p>
         </a>
       </div>
 
-      <!-- كروت قائمة -->
       <div class="card">
         <a href="https://mabavira.github.io/Civibot/" target="_blank" rel="noopener">
           <i class="fas fa-robot"></i>
-          <h2>Civibot<br>سيفي بوت</h2>
+          <h2>
+            Civibot<br>
+            سيفي بوت
+          </h2>
           <p>Urban Robotics by MABA</p>
         </a>
       </div>
@@ -57,7 +191,10 @@
       <div class="card">
         <a href="https://solvanix.github.io/Product_Store/" target="_blank" rel="noopener">
           <i class="fas fa-store"></i>
-          <h2>Product Store<br>متجر المنتجات</h2>
+          <h2>
+            Product Store<br>
+            متجر المنتجات
+          </h2>
           <p>Solvanix’s Modular Marketplace</p>
         </a>
       </div>
@@ -65,16 +202,20 @@
       <div class="card">
         <a href="https://solvanix.github.io/Switchers_Hub/" target="_blank" rel="noopener">
           <i class="fas fa-project-diagram"></i>
-          <h2>Switchers Hub<br>مركز المبدلين</h2>
-          <p>Modular Systems & Fitra.OS</p>
+          <h2>
+            Switchers Hub<br>
+            مركز المبدلين
+          </h2>
+          <p>Modular Systems &amp; Fitra.OS</p>
         </a>
       </div>
     </section>
 
     <footer>
-      © 2025 Urbantana — Mindful Adaptive Built-in Tech Alliance
-      <br>© ٢٠٢٥ أوربانتانا — تحالف التقنية المدمجة المرنة الواعية
+      © 2025 Urbantana — Mindful Adaptive Built-in Tech Alliance<br>
+      © ٢٠٢٥ أوربانتانا — تحالف التقنية المدمجة المرنة الواعية
     </footer>
   </div>
 </body>
 </html>
+```
